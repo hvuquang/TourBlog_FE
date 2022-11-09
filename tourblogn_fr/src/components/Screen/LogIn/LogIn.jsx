@@ -3,15 +3,13 @@ import BackGround from "../../background/background";
 import Button from "../../Button/Button";
 import Link from "../../Link/Link";
 import TextInput from "../../TextInput/TextInput";
-import './LogIn.css'
+import "./LogIn.css";
 class LogIn extends Component {
   render() {
     return (
       <BackGround>
-        <div>
-          <TextInput name="UserName" />
-          <TextInput name="Password" />
-        </div>
+        <TextInput name="UserName" />
+        <TextInput name="Password" />
         <div className="link--password">
           <Link content="Forgot password?" />
         </div>
