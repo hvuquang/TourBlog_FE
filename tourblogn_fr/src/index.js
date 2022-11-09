@@ -3,9 +3,6 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import TextInput from "./components/TextInput/TextInput";
-import BackGround from "./components/background/BackGround";
-import Button from "./components/Button/Button";
 import LogIn from "./components/Screen/LogIn/LogIn";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
