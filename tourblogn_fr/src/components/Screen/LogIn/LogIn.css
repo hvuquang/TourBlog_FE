@@ -3,3 +3,11 @@
     display: flex;
     justify-content: flex-end;
 }
+
+.background__input {
+    margin: 5% 0;
+}
+
+.background-container {
+    margin: 10% auto;
+}
