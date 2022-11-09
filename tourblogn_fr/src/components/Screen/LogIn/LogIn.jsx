@@ -9,6 +9,7 @@ class LogIn extends Component {
     return (
       <div className="background-container">
         <BackGround>
+          <img id="logo" src={process.env.PUBLIC_URL + 'images/logoTravel.png'} alt="" />
           <div class="background__input">
             <TextInput
               name="UserName"

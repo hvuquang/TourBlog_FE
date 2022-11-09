@@ -11,3 +11,8 @@
 .background-container {
     margin: 10% auto;
 }
+
+#logo {
+    width: 280px;
+    height: 97px;
+}
