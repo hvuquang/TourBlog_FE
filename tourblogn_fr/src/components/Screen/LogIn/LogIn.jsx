@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import BackGround from "../../background/BackGround";
+import BackGround from "../../background/background";
 import Button from "../../Button/Button";
 import TextInput from "../../TextInput/TextInput";
 

@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import './BackGround.css'
+import './background.css'
 
 export default class BackGround extends Component {
   render() {
