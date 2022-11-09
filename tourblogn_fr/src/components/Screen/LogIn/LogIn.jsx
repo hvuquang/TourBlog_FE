@@ -8,8 +8,16 @@ class LogIn extends Component {
   render() {
     return (
       <BackGround>
-        <TextInput name="UserName" />
-        <TextInput name="Password" />
+        <TextInput
+          name="UserName"
+          link="/images/username-removebg-preview.png"
+          input="text"
+        />
+        <TextInput
+          name="Password"
+          link="/images/password-removebg-preview.png"
+          input="password"
+        />
         <div className="link--password">
           <Link content="Forgot password?" />
         </div>
