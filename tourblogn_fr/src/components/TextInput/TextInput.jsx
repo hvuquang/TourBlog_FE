@@ -8,13 +8,14 @@ class TextInput extends Component {
     return (
       <div className="container">
         <div className="container__img">
-          <IconContext.Provider value={{ color: "black", size: "35px" }}>
+          {/* <IconContext.Provider value={{ color: "black", size: "35px" }}>
             <BiUserCircle />
-          </IconContext.Provider>
+          </IconContext.Provider> */}
+          <img src={process.env.PUBLIC_URL + this.props.link}/>
         </div>
         <input
           className="container__input"
-          type="text"
+          type={this.props.input}
           placeholder={this.props.name}
         />
       </div>
