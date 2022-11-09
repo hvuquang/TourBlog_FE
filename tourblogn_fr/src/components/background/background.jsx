@@ -1,8 +1,8 @@
 
 import React, { Component } from 'react'
-import './background.css'
+import './BackGround.css'
 
-export default class background extends Component {
+export default class BackGround extends Component {
   render() {
     return (
         <center><div className='mainbackground'>{this.props.children}</div></center>
