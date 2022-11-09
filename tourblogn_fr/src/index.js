@@ -4,10 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Button from './components/Button/Button';
+import Background from './components/background/background';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
- <Button>login</Button>
+ 
 );
 
 // If you want to start measuring performance in your app, pass a function
