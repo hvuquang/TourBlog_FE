@@ -7,23 +7,29 @@ import "./LogIn.css";
 class LogIn extends Component {
   render() {
     return (
-      <BackGround>
-        <TextInput
-          name="UserName"
-          link="/images/username-removebg-preview.png"
-          input="text"
-        />
-        <TextInput
-          name="Password"
-          link="/images/password-removebg-preview.png"
-          input="password"
-        />
-        <div className="link--password">
-          <Link content="Forgot password?" />
-        </div>
-        <Button>LOGIN</Button>
-        <Link content="Register ?" />
-      </BackGround>
+      <div className="background-container">
+        <BackGround>
+          <div class="background__input">
+            <TextInput
+              name="UserName"
+              link="/images/username-removebg-preview.png"
+              input="text"
+            />
+          </div>
+          <div id="background__input">
+            <TextInput
+              name="Password"
+              link="/images/password-removebg-preview.png"
+              input="password"
+            />
+          </div>
+          <div className="link--password">
+            <Link content="Forgot password?" />
+          </div>
+          <Button>LOGIN</Button>
+          <Link content="Register ?" />
+        </BackGround>
+      </div>
     );
   }
 }
