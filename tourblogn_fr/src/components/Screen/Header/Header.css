@@ -1,0 +1,31 @@
+.Header{
+    height: 8.5vh;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top:0;
+    left: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.Header .Header_Logo{
+    padding-left: 5vw;
+    width: fit-content;
+    height: 100%;
+}
+.Header .Header_Profile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    color: #000;
+    padding-right: 5vw;
+}
+.Header .Header_Profile .Header_icProfile{
+    width: fit-content;
+}
+.Header .Header_Profile .Header_icProfile .Header_NameProfile{
+    width: fit-content;
+}
