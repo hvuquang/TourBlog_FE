@@ -6,7 +6,7 @@ import TextInput from '../../TextInput/TextInput'
 import Link from '../../Link/Link'
 import InputNoneIMG from '../../InputNoneIMG/InputNoneIMG'
 
-export default class Register extends Component {
+export default class ForgetPassword extends Component {
   render() {
     return (
         <center id="ForgotPWComponent">
