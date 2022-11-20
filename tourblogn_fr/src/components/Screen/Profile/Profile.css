@@ -1,17 +1,20 @@
 .Profile{
+    background-color: #164DB1;
+    min-height: 91.5vh;
+}
+.Profile_section{
     border-style: solid;
     border-width: 2px;
-    border-radius: 10px;
+    border-radius: 15px;
     border-color: #000;
     background-color: #ffffff;
     
     width: 40vw;
     height: 60vh;
-    margin: 19vh 29vw;
-}
-.Profile_section{
-    padding-left: 1vw;
-    padding-top: 1vh;
+    margin: 8.5vh 29vw;
+
+    padding-left: 3vw;
+    padding-top: 5vh;
     display: flex;
     flex-direction: column;
 }

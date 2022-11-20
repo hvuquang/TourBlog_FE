@@ -25,7 +25,6 @@ export default function Profile() {
                     Đăng xuất
                 </button>
             </div>
-            
         </div>
     </div>
   )
