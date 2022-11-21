@@ -10,22 +10,20 @@
     flex-direction: row;
     justify-content: space-between;
 }
+
 .Header .Header_Logo{
     padding-left: 5vw;
-    width: fit-content;
+    width: 15%;
     height: 100%;
 }
 .Header .Header_Profile{
     display: flex;
     flex-direction: row;
     align-items: center;
-
     color: #000;
     padding-right: 5vw;
 }
-.Header .Header_Profile .Header_icProfile{
-    width: fit-content;
-}
+
 .Header .Header_Profile .Header_icProfile .Header_NameProfile{
     width: fit-content;
 }

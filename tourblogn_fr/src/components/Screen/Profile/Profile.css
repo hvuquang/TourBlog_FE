@@ -2,6 +2,12 @@
     background-color: #164DB1;
     min-height: 91.5vh;
 }
+
+.Profile img {
+    min-width: 30px;
+    width: 80px;
+}
+
 .Profile_section{
     border-style: solid;
     border-width: 2px;
