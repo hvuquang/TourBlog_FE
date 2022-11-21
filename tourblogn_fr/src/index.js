@@ -7,11 +7,12 @@ import LogIn from "./components/Screen/LogIn/LogIn";
 import Register from "./components/Screen/Register/Register";
 import ForgetPassword from "./components/Screen/ForgetPassword/ForgetPassword";
 import Card from "./components/Card/Card";
+import Profile from "./components/Screen/Profile/Profile";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Card />
+    <Profile />
   </React.StrictMode>
 );
 
