@@ -1,13 +1,18 @@
-.link--password {
+.login__link--password {
     width: 100%;
     display: flex;
     justify-content: flex-end;
 }
 
-.background__input {
-    margin: 5% 0;
+.login__background__input {
+    margin: 1.5% 0;
 }
 
-.background-container {
+.login__background-container {
     margin: 10% auto;
+}
+
+#login__logo {
+    width: 280px;
+    height: 97px;
 }

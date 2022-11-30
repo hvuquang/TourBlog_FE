@@ -1,4 +1,4 @@
-.TextInput__container {
+.container {
     width: 604px;
     height: 50px;
     border: 1px solid black;
@@ -11,7 +11,7 @@
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.TextInput__container__img {
+.container__img {
     width: 35px;
     height: 35px;
     display: flex;
@@ -19,12 +19,12 @@
     align-items: center;
 }
 
-.TextInput img {
+img {
     width: 30px;
     height: 30px;
 }
 
-.TextInput__container__input {
+.container__input {
     width: 90%;
     height: 29px;
     border: none;
