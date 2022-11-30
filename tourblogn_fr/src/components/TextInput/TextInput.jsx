@@ -9,6 +9,8 @@ class TextInput extends Component {
           <img src={process.env.PUBLIC_URL + this.props.link}/>
         </div>
         <input
+        multiple={this.props.multiple}
+         onChange={this.props.onchange}
           className="TextInput__container__input"
           type={this.props.input}
           placeholder={this.props.name}

@@ -6,8 +6,7 @@ import { IconContext } from "react-icons";
 class TextInput extends Component {
   render() {
     return (
-      <div className="container">
-        
+      <div className="container"> 
         <input
           className="container__input"
           type={this.props.input}
