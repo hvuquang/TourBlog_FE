@@ -1,11 +1,9 @@
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-}
 .add_post{
     background-color: #164DB1;
     padding: 15px;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
 }
 .add_post .title{
     color: #ffffff;
