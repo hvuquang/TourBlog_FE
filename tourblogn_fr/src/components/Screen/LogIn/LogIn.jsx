@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { loginUser } from "../../../redux/apiRequest";
 import BackGround from "../../background/background";
-import { unstable_HistoryRouter, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Button from "../../Button/Button";
 import Link from "../../Link/Link";
 import TextInput from "../../TextInput/TextInput";
