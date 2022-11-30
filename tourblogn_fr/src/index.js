@@ -10,12 +10,12 @@ import ForgetPassword from "./components/Screen/ForgetPassword/ForgetPassword";
 import Profile from "./components/Screen/Profile/Profile";
 import {Provider} from "react-redux";
 import store from "./redux/store";
-
+import AddPost from './components/AddPost/AddPost'
+import Post from './components/Post/Post'
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}><LogIn/></Provider>
-  
-  
+  // <Post />
 );
 
 // If you want to start measuring performance in your app, pass a function
