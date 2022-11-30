@@ -4,22 +4,16 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import LogIn from "./components/Screen/LogIn/LogIn";
-<<<<<<< HEAD
 import Profile from "./components/Screen/Profile/Profile";
-=======
 import Register from "./components/Screen/Register/Register";
 import ForgetPassword from "./components/Screen/ForgetPassword/ForgetPassword";
 import Card from "./components/Card/Card";
->>>>>>> HuyN
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-<<<<<<< HEAD
     <Profile />
-=======
     <Card />
->>>>>>> HuyN
   </React.StrictMode>
 );
 
