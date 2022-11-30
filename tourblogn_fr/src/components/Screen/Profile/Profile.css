@@ -1,7 +1,8 @@
-/* .Profile{
+.Profile{
     background-color: #164DB1;
-    min-height: 91.5vh;
-} */
+    min-height: 100vh;
+    padding: 10vh;
+}
 
 .Profile img {
     min-width: 30px;
@@ -20,7 +21,7 @@
     height: 75vh;
     min-width: 390px;
     min-height: 471px;
-    margin: 8.5vh 29vw;
+    margin: 0vh 29vw;
 
     display: flex;
     flex-direction: column;
