@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { loginUser } from "../../../redux/apiRequest";
 import BackGround from "../../background/background";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 import Button from "../../Button/Button";
-import Link from "../../Link/Link";
+import Links from "../../Link/Link";
 import TextInput from "../../TextInput/TextInput";
 import "./LogIn.css";
 import { useDispatch } from "react-redux";
@@ -52,7 +52,8 @@ const LogIn = () => {
             />
           </div>
           <div className="login__link--password">
-            <Link content="Forgot password?" />
+    
+           <Links content="Forgot password?" />
           </div>
           <Button
             type="submit"
@@ -62,7 +63,7 @@ const LogIn = () => {
             LOGIN
           </Button>
         </form>
-        <Link content="Register ?" />
+        <Links content="Register ?" />
       </BackGround>
     </div>
   );

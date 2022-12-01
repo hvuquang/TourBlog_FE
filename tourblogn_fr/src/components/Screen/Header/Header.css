@@ -27,3 +27,7 @@
 .Header .Header_Profile .Header_icProfile .Header_NameProfile{
     width: fit-content;
 }
+.Header .Header_Profile .Header_icProfile{
+    height: 30px;
+    width: 30px;
+}

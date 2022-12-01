@@ -12,15 +12,19 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 import AddPost from "./components/AddPost/AddPost";
 import Post from "./components/Post/Post";
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, BrowserRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
+  <BrowserRouter>
+  
   <Router>
     <Provider store={store}>
       <LogIn />
     </Provider>
     {/* <Profile /> */}
   </Router>
+  </BrowserRouter>
+  
   // <Post />
 );
 
