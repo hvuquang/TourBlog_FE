@@ -1,0 +1,49 @@
+.DetailPost{
+    background-color: darkblue;
+    min-height: 110vh;
+    height: 100%;
+}
+
+.DetailPost__body{
+    padding-top: 8.5vh;
+    margin: 0 5vw;
+    background-color: rgb(255, 255, 255);
+    
+    border-radius: 20px;
+}
+.DetailPost__User{
+    display: flex;
+    flex-direction: row;
+
+    padding-left: 30px;
+}
+.DetailPost__User--icProfile{
+    padding-top: 10px;
+    height: 5vh;
+}
+.DetailPost__Image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.DetailPost__Image--imgMain{
+    padding-top: 20px;
+    height: 50vh;
+}
+.DetailPost__Image--imgMini{
+    display: flex;
+    flex-direction: row;
+    padding-top: 10vh;
+}
+.DetailPost__Image--img{
+    height: 10vh;
+    padding-right: 15px;
+}
+.DetailPost__content{
+    padding-left: 30px; 
+    padding-right: 30px;
+}
+.DetailPost__content--description{
+    height: fit-content;
+    padding-bottom: 20px;
+}
