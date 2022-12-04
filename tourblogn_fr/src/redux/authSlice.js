@@ -5,6 +5,7 @@ const authSlice = createSlice({
   initialState: {
     login: {
       currentUser: null,
+      // thông tin người dùng được trả về
       isFetching: false,
       error: false,
     }
