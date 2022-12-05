@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import LogIn from './components/Screen/LogIn/LogIn';
 import './App.css';
 import { Router, Routes, Route, Link } from 'react-router-dom'
 
@@ -16,15 +16,22 @@ function App() {
 
 
   return (
+
     <>
+    
       <Header />
       <Routes>
+        
         <Route path='/profile' element={<Profile />} />
         <Route path='/login' element={ <CallLogin/>}/>
         <Route path='/register' element={<Register />} />
+        <Route path='/login' element={<LogIn />} />
       </Routes>
 
     </>
+
+   
+
   );
 }
 
