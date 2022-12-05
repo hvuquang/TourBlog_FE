@@ -10,6 +10,7 @@ import ForgetPassword from "./components/Screen/ForgetPassword/ForgetPassword";
 import Profile from "./components/Screen/Profile/Profile";
 import { Provider } from "react-redux";
 import store from "./redux/store";
+<<<<<<< HEAD
 import AddPost from "./components/AddPost/AddPost";
 import Post from "./components/Post/Post";
 import { BrowserRouter as Router, Route, Link, BrowserRouter } from 'react-router-dom';
@@ -24,6 +25,16 @@ root.render(
     {/* <Profile /> */}
   </Router>
   </BrowserRouter>
+=======
+import DetailPost from "./components/Screen/DetailPost/DetailPost";
+import Header from "./components/Screen/Header/Header";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <DetailPost/>
+  </React.StrictMode>
+>>>>>>> main
   
   // <Post />
 );

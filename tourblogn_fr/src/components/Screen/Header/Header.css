@@ -23,9 +23,8 @@
     color: #000;
     padding-right: 5vw;
 }
-
-.Header .Header_Profile .Header_icProfile .Header_NameProfile{
-    width: fit-content;
+.Header_icProfile{
+    height: 5vh;
 }
 .Header .Header_Profile .Header_icProfile{
     height: 30px;
