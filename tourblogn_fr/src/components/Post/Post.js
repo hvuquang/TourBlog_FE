@@ -22,10 +22,10 @@ function Post() {
         {postList.map((post,key)=>{
             const imgList = post.imgURLs.split(",")[0];
             const img_url = "http://localhost:8000/"+imgList;
-            return <Link to={"/detailpost"}><div className='post' key={key}>
+            return <div className='post' key={key}>
                 <img className='post_img' src={img_url} alt='' />
                     <div className='post_title'>{post.title}</div>
-                    <div className='post_content'>{post.des} <strong className='read_more'>...read more</strong></div>
+                    <div className='post_content'>{post.des} <Link to={"/detailpost"}><strong className='read_more'>...read more</strong> </Link></div>
                     <div className='post_react_flex'>
                         <div className='post_icon_like'>
                             <img className='img_like' onClick={()=>likeHandle(post._id)} src={like} alt='' />
@@ -40,9 +40,15 @@ function Post() {
                         </div>
                     </div>
                 </div>
-                </Link>
+               
             
         })}
+
+        <Link to={"/addpost"}>
+         <div className='btnAddport'>
+            <img  className='iconAddPost' src={process.env.PUBLIC_URL + '/images/iconAddPost.png'} alt={"AddPost"}/>
+        </div>
+        </Link>
     </div>
     
   )
