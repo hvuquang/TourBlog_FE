@@ -1,6 +1,9 @@
 .container{
     margin: 3%;
 }
+#RegisterBody{
+    background-color: #fff;
+}
 .mainbutton{
     margin: 5% 0;
 }

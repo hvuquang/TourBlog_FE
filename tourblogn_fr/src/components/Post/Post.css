@@ -1,6 +1,10 @@
+.grid{
+    margin-top: 12vh;
+}
 .post{
     width: 313px;
     height: 410px;
+   
     background-color: #ffffff;
     border-radius: 20px;
 }

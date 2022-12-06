@@ -1,14 +1,16 @@
 .DetailPost{
-    background-color: darkblue;
+    background-color: #164DB1;
     min-height: 110vh;
     height: 100%;
+   
 }
 
 .DetailPost__body{
     padding-top: 8.5vh;
     margin: 0 5vw;
     background-color: rgb(255, 255, 255);
-    
+    margin-top: 12vh;
+    margin-bottom: 12vh;
     border-radius: 20px;
 }
 .DetailPost__User{

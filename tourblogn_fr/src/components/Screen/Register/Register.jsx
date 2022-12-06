@@ -3,8 +3,9 @@ import './Register.css'
 import BackGround from '../../background/background'
 import Button from '../../Button/Button'
 import TextInput from '../../TextInput/TextInput'
-import Link from '../../Link/Link'
+import Links from '../../Link/Link'
 import InputNoneIMG from '../../InputNoneIMG/InputNoneIMG'
+import { Link} from 'react-router-dom'
 
 export default class Register extends Component {
   render() {
@@ -16,7 +17,7 @@ export default class Register extends Component {
         <InputNoneIMG name="Verify Password" input="password"/>
         <InputNoneIMG name="Email" input="email"/>
         <Button>Create Account</Button>
-        <Link content="Already have account? Log In"/>
+      <Link to={"/login"}><Links content="Already have account? Log In"/></Link>
       </BackGround>
     )
   }

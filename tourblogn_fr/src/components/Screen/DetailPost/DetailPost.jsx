@@ -5,7 +5,7 @@ import Header from '../Header/Header'
 export default function DetailPost() {
   return (
     <div className='DetailPost'>
-        <Header/>
+      
         <div className='DetailPost__body'>
             <div className='DetailPost__User'>
                 <img className='DetailPost__User--icProfile' src={process.env.PUBLIC_URL + '/images/username-removebg-preview.png'} alt='Header_icProfile'/>
