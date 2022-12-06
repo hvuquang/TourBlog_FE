@@ -10,15 +10,12 @@ import ForgetPassword from "./components/Screen/ForgetPassword/ForgetPassword";
 import Profile from "./components/Screen/Profile/Profile";
 import { Provider } from "react-redux";
 import store from "./redux/store";
-<<<<<<<<< Temporary merge branch 1
 import AddPost from "./components/AddPost/AddPost";
 import Post from "./components/Post/Post";
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  // <React.StrictMode>
-  //   <DetailPost/>
-  // </React.StrictMode>
+ 
   <Router>
     <Provider store={store}>
       <App />

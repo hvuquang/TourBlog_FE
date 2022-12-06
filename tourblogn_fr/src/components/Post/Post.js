@@ -3,6 +3,7 @@ import "./Post.css"
 import like from "./like.png";
 import Delete from "./delete.png"
 import Axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function Post() {
     const [postList,setPostList] = useState([])
@@ -21,7 +22,7 @@ function Post() {
         {postList.map((post,key)=>{
             const imgList = post.imgURLs.split(",")[0];
             const img_url = "http://localhost:8000/"+imgList;
-            return <div className='post' key={key}>
+            return <Link to={"/detailpost"}><div className='post' key={key}>
                 <img className='post_img' src={img_url} alt='' />
                     <div className='post_title'>{post.title}</div>
                     <div className='post_content'>{post.des} <strong className='read_more'>...read more</strong></div>
@@ -39,6 +40,7 @@ function Post() {
                         </div>
                     </div>
                 </div>
+                </Link>
             
         })}
     </div>

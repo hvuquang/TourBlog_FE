@@ -1,6 +1,7 @@
 import React from "react";
 import "./Profile.css";
 import Header from "../Header/Header";
+import { Link } from "react-router-dom";
 
 export default function Profile() {
   return (
@@ -68,7 +69,7 @@ export default function Profile() {
           </div>
         </div>
         <div className="Profile_Logout">
-          <button className="Button_Logout">Đăng xuất</button>
+          <Link to={"/login"}><button className="Button_Logout">Đăng xuất</button></Link>
         </div>
       </div>
     </div>

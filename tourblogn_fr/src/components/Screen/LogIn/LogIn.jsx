@@ -53,7 +53,7 @@ const LogIn = () => {
           </div>
           <div className="login__link--password">
     
-           <Links content="Forgot password?" />
+           <Link to={"/forgetPassword"}><Links content="Forgot password?" /></Link>
           </div>
           <Button
             type="submit"
@@ -63,7 +63,7 @@ const LogIn = () => {
             LOGIN
           </Button>
         </form>
-        <Links content="Register ?" />
+        <Link to={"/register"}><Links content="Register ?" /></Link>
       </BackGround>
     </div>
   );
