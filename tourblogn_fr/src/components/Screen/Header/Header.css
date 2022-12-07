@@ -13,20 +13,23 @@
 
 .Header .Header_Logo{
     padding-left: 5vw;
-    width: 15%;
     height: 100%;
 }
 .Header .Header_Profile{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     color: #000;
     padding-right: 5vw;
+    max-width: 250px;
+    max-height: 67px;
 }
 .Header_icProfile{
     height: 5vh;
 }
 .Header .Header_Profile .Header_icProfile{
     height: 30px;
-    width: 30px;
+    margin-top: 5px;
+    margin-left: 10px;
 }
