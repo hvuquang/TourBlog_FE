@@ -5,7 +5,7 @@ export default class Button extends Component {
   render() {
     return (
       <center>
-        <button className="mainbutton" type="submit" onClick={() => alert(`Username: ${this.props.name}`)}>
+        <button className="mainbutton" type="submit">
           {this.props.children}
         </button>
       </center>

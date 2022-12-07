@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { loginUser } from "../../../redux/apiRequest";
 import BackGround from "../../background/background";
-import { useNavigate,Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Button from "../../Button/Button";
 import Links from "../../Link/Link";
 import TextInput from "../../TextInput/TextInput";
@@ -17,10 +17,10 @@ const LogIn = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     const newUser = {
-      username: username,
+      userName: username,
       password: password,
     };
-    loginUser(newUser, dispatch, navigate)
+    loginUser(newUser, dispatch, navigate);
   };
 
   return (
@@ -32,14 +32,17 @@ const LogIn = () => {
           alt=""
         />
         <form onSubmit={handleLogin}>
-          <div class="login__background__input">
-            <TextInput
+          <div className="login__background__input">
+            <input placeholder="name" type="text" onChange={(e) => setUsername(e.target.value)} />
+            <input
+              type="password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            {/* <TextInput
               name="UserName"
               link="/images/username-removebg-preview.png"
               input="text"
               onChange={(e) => setUsername(e.target.value)}
-              // getUsername={() => getLogInValue()}
-              // username={username}
             />
           </div>
           <div class="login__background__input">
@@ -48,22 +51,21 @@ const LogIn = () => {
               link="/images/password-removebg-preview.png"
               input="password"
               onChange={(e) => setPassword(e.target.value)}
-              // onChange={this.getLogInValue}
-            />
+            /> */}
           </div>
           <div className="login__link--password">
-    
-           <Link to={"/forgetPassword"}><Links content="Forgot password?" /></Link>
+            <Link to={"/forgetPassword"}>
+              <Links content="Forgot password?" />
+            </Link>
           </div>
-          <Button
-            type="submit"
-            name={username}
-            onSubmit
-          >
+          {/* <Button type="submit" name={username} onSubmit>
             LOGIN
-          </Button>
+          </Button> */}
+          <button type="submit">LOGIN</button>
         </form>
-        <Link to={"/register"}><Links content="Register ?" /></Link>
+        <Link to={"/register"}>
+          <Links content="Register ?" />
+        </Link>
       </BackGround>
     </div>
   );
