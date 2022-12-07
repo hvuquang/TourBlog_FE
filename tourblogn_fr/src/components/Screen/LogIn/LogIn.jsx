@@ -33,12 +33,16 @@ const LogIn = () => {
         />
         <form onSubmit={handleLogin}>
           <div className="login__background__input">
-            <input placeholder="name" type="text" onChange={(e) => setUsername(e.target.value)} />
+            <input
+              placeholder="name"
+              type="text"
+              onChange={(e) => setUsername(e.target.value)}
+            />
             <input
               type="password"
               onChange={(e) => setPassword(e.target.value)}
             />
-            {/* <TextInput
+            <TextInput
               name="UserName"
               link="/images/username-removebg-preview.png"
               input="text"
@@ -51,7 +55,7 @@ const LogIn = () => {
               link="/images/password-removebg-preview.png"
               input="password"
               onChange={(e) => setPassword(e.target.value)}
-            /> */}
+            />
           </div>
           <div className="login__link--password">
             <Link to={"/forgetPassword"}>
