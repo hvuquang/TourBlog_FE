@@ -90,3 +90,16 @@
     justify-content: center;
     margin-left: 5px;
 }
+
+.search_container {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.search_container .search {
+    height: 40px;
+    width: 600px;
+    border-radius: 10px;
+    border-color: transparent;
+}

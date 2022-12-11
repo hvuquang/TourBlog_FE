@@ -79,3 +79,15 @@
     cursor: pointer;
     font-weight: bold;
 }
+
+.add_post .show_img_container{
+    display: flex;
+}
+
+.add_post .show_img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-top: 15px;
+    border-radius: 5px;
+}
