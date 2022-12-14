@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import "./AddPost.css"
 import add_post_img from "./add_post_img.png"
 import Axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
 function AddPost() {
     const [title , setTitle] = useState();
@@ -10,6 +11,7 @@ function AddPost() {
     const [showImg , setShowImg] = useState([])
     const [show , setShow] = useState(false)
     const formData = new FormData();
+    const navigate = useNavigate()
     formData.append('title', title);
     formData.append('des', des);
     formData.append('imgURLs', img)
@@ -28,6 +30,9 @@ function AddPost() {
         Axios.post("http://localhost:8000/v1/post/addPost", 
             formData
         )
+        navigate('/')
+        window.location.reload()
+
     }
     console.log(formData.get('imgURLs'));
     console.log(formData)
