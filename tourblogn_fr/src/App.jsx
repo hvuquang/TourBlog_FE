@@ -14,22 +14,21 @@ import ForgetPassword from './components/Screen/ForgetPassword/ForgetPassword';
 import AddPost from './components/AddPost/AddPost';
 import Post from './components/Post/Post';
 import LogIn from './components/Screen/LogIn/LogIn';
+import { useState } from 'react';
 //import DetailPost from './components/Screen/DetailPost/DetailPost';
 
 function App() {
-
 
   return (
 
     <div id='App'>
     
-      <Header />
+      {/* <Header /> */}
    
-      
       <Routes>
       <Route path='/forgetPassword' element={<ForgetPassword/>} />
         <Route path='/' element={<Post/>} />
-        <Route path='/login' element={<LogIn/>} />
+        <Route path='/login' element={<LogIn />} />
         <Route path='/detailpost' element={<DetailPost/>} />
         <Route path='/addpost' element={<AddPost/>} />
         <Route path='/profile' element={<Profile />} />

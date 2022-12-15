@@ -3,6 +3,7 @@ import "./AddPost.css"
 import add_post_img from "./add_post_img.png"
 import Axios from 'axios'
 import { useNavigate } from 'react-router-dom';
+import Header from '../Screen/Header/Header';
 
 function AddPost() {
     const [title , setTitle] = useState();
@@ -39,6 +40,7 @@ function AddPost() {
     console.log([...formData])
   return (
     <div className='add_post'>
+        <Header />
         <div className='title'>Tiêu đề:</div>
         <input type='text' className='input_title' onChange={(event)=>{setTitle(event.target.value)}}/>
         <div className='title'>Viết blog:</div>

@@ -2,10 +2,12 @@ import React from "react";
 import "./Profile.css";
 import Header from "../Header/Header";
 import { Link } from "react-router-dom";
+import store from "../../../redux/store";
 
 export default function Profile() {
   return (
     <div className="Profile">
+      <Header />
       <div className="Profile_section">
         <div className="Profile_header">
           <img
@@ -13,7 +15,9 @@ export default function Profile() {
             src={require("../../../assets/user.png")}
             alt="Profile_header_icon"
           />
-          <h2 className="Profile_header_name">Vũ Quang Huy</h2>
+          <h2 className="Profile_header_name">
+            {store.getState().auth.login.currentUser == null ? <p>NULL</p> : <p>{store.getState().auth.login.currentUser.userName}</p>}
+          </h2>
           <p className="Profile_header_details">A web developer, love cats</p>
         </div>
         <div className="Profile_content">
@@ -42,7 +46,7 @@ export default function Profile() {
               <div>
                 <img src={require("../../../assets/email.png")} alt="email" />
               </div>
-              <p>abc@gmail.com</p>
+              {store.getState().auth.login.currentUser == null ? <p>NULL</p> : <p>{store.getState().auth.login.currentUser.email}</p>}
             </div>
             <div className="Profile_contact">
               <img
@@ -69,7 +73,9 @@ export default function Profile() {
           </div>
         </div>
         <div className="Profile_Logout">
-          <Link to={"/login"}><button className="Button_Logout">Đăng xuất</button></Link>
+          <Link to={"/login"}>
+            <button className="Button_Logout">Đăng xuất</button>
+          </Link>
         </div>
       </div>
     </div>

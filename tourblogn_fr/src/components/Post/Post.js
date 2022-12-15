@@ -5,6 +5,7 @@ import Delete from "./delete.png"
 import Axios from 'axios';
 import { Link } from 'react-router-dom';
 import Loading from '../Loading/Loading';
+import Header from '../Screen/Header/Header';
 
 function Post() {
     const [postList,setPostList] = useState([])
@@ -22,6 +23,7 @@ function Post() {
     const [query, setQuery] = useState("")
   return (
     <div>
+        <Header />
         <div className='search_container'>
             <input
                 type='text'

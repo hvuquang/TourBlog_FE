@@ -14,6 +14,7 @@
 .Header .Header_Logo{
     padding-left: 5vw;
     height: 100%;
+    width: 50%;
 }
 .Header .Header_Profile{
     display: flex;
@@ -29,7 +30,8 @@
     height: 5vh;
 }
 .Header .Header_Profile .Header_icProfile{
-    height: 30px;
+    height: 50px;
+    width: 50px;
     margin-top: 5px;
     margin-left: 10px;
 }

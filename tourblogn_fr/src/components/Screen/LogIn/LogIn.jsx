@@ -7,6 +7,7 @@ import Links from "../../Link/Link";
 import TextInput from "../../TextInput/TextInput";
 import "./LogIn.css";
 import { useDispatch } from "react-redux";
+import Header from "../Header/Header";
 
 const LogIn = () => {
   const [username, setUsername] = useState("huy");
@@ -69,7 +70,7 @@ const LogIn = () => {
         </form>
         <Link to={"/register"}>
           <Links content="Register ?" />
-        </Link>
+        </Link> 
       </BackGround>
     </div>
   );
