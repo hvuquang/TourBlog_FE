@@ -5,9 +5,15 @@ import Delete from "./delete.png"
 import Axios from 'axios';
 import { Link } from 'react-router-dom';
 import Loading from '../Loading/Loading';
+import { useSelector } from 'react-redux';
+
+
 
 function Post() {
     const [postList,setPostList] = useState([])
+    const user= useSelector((state)=> state.auth.login?.currentUser);
+    const a=false;
+  
     const [loading , setLoading] = useState(false)
     useEffect(()=>{
         Axios.get('http://localhost:8000/v1/post/readPost').then((respone) => {setPostList(respone.data) ; setLoading(true)})
@@ -23,6 +29,7 @@ function Post() {
   return (
     <div>
         <div className='search_container'>
+         
             <input
                 type='text'
                 placeholder='Search...'
@@ -48,10 +55,13 @@ function Post() {
                                 <div className='text_like'>{post.like}</div>
                             </div>
                         </div>
-                        <div className='post_icon_like'>
+                        {user?.admin ? <div className='post_icon_like'>
                             <img src={Delete} alt='' />
                             <div className='text_like1'>Delete</div>
-                        </div>
+                          
+                          </div>:""}
+                            
+                        
                     </div>
                 </div>
             }):<Loading/>}
