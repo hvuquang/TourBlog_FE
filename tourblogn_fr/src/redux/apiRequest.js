@@ -7,12 +7,10 @@ export const loginUser = async(user,dispatch,navigate)=>{
         const res = await axios.post("http://localhost:8000/v1/auth/login",user);
         dispatch(loginSuccess(res.data));
         navigate("/");
-        console.log("run")
     }
     catch(err){
         dispatch(loginFailed());
         console.log(err);
-        console.log(user)
     }
 }
 export const registerUser =async(user,dispatch,navigate)=>{
@@ -25,6 +23,5 @@ export const registerUser =async(user,dispatch,navigate)=>{
     }
     catch(err){
         dispatch(registerFailed());
-
     }
 }
