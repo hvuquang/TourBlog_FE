@@ -6,7 +6,7 @@
 }
 
 .DetailPost__body{
-    padding-top: 8.5vh;
+    padding-top: 2.5vh;
     margin: 0 5vw;
     background-color: rgb(255, 255, 255);
     margin-top: 12vh;
@@ -48,4 +48,10 @@
 .DetailPost__content--description{
     height: fit-content;
     padding-bottom: 20px;
+    width: 100%;
+    color: black;
+    font-size: large;
+    margin-right: 25%;
+    outline: none;
+    border: none;
 }

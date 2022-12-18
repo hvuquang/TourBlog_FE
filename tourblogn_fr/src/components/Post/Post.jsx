@@ -41,12 +41,15 @@ function Post() {
               {loading?postList.filter((post) =>
                   post.title.toLowerCase().includes(query)
               ).map((post, key) => {
+                const text = post.des
                 const imgList = post.imgURLs.split(",")[0];
                 const img_url = "http://localhost:8000/" + imgList;
                 return <div className='post' key={key}>
                     <img className='post_img' src={img_url} alt='' />
                     <div className='post_title'>{post.title}</div>
-                    <div className='post_content'>{post.des} <Link to="/detailpost" state={{title:post.title,des:post.des,imgURLs:img_url}}><strong className='read_more'>...read more</strong> </Link></div>
+                    {/* cần chỉnh lại do nếu để nội dung dài sẽ bị tràn ra ngoài post */}
+                    {/* đã chỉnh xong */}
+                    <div className='post_content'>{text.slice(0,50)} <Link to="/detailpost" state={{title:post.title,des:post.des,imgURLs:img_url}}><strong className='read_more'>...read more</strong> </Link></div>
                     <div className='post_react_flex'>
                         <div className='post_icon_like'>
                             <img className='img_like' onClick={() => likeHandle(post._id)} src={like} alt='' />

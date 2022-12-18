@@ -32,7 +32,8 @@ function AddPost() {
             formData
         )
         navigate('/')
-        window.location.reload()
+        // window.location.reload()
+        //load lại là mất user
 
     }
     console.log(formData.get('imgURLs'));
@@ -42,9 +43,11 @@ function AddPost() {
     <div className='add_post'>
         <Header />
         <div className='title'>Tiêu đề:</div>
-        <input type='text' className='input_title' onChange={(event)=>{setTitle(event.target.value)}}/>
+        {/* <input type='text' className='input_title' onChange={(event)=>{setTitle(event.target.value)}}/> */}
+        <textarea type='text' className='input_title' cols="10" rows="10" onChange={(event)=>{setTitle(event.target.value)}}></textarea>
         <div className='title'>Viết blog:</div>
-        <input type='text' className='input_des' onChange={(event) => { setDes(event.target.value) }}/>
+        {/* <input multiple type='text' className='input_des' onChange={(event) => { setDes(event.target.value) }}/> */}
+        <textarea type='text' className='input_des' cols="30" rows="10" onChange={(event) => { setDes(event.target.value) }}></textarea>
         <div className='show_img_container'>
             <section>
                 <label>
