@@ -33,15 +33,6 @@ export default function Profile() {
                 <p>300000</p>
               </div>
             </div>
-            <div className="Profile_information--phone">
-              <div>
-                <img
-                  src={require("../../../assets/phone-call.png")}
-                  alt="phone-icon"
-                />
-              </div>
-              <p>0123456789</p>
-            </div>
             <div className="Profile_information--email">
               <div>
                 <img src={require("../../../assets/email.png")} alt="email" />
@@ -75,6 +66,11 @@ export default function Profile() {
         <div className="Profile_Logout">
           <Link to={"/login"}>
             <button className="Button_Logout">Đăng xuất</button>
+          </Link>
+        </div>
+        <div className="Profile_Logout">
+          <Link to={"/login"}>
+            <button className="Button_Logout">Log In ?</button>
           </Link>
         </div>
       </div>

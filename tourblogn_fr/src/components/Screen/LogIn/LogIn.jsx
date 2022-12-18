@@ -14,7 +14,6 @@ const LogIn = () => {
   const [password, setPassword] = useState("112");
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -24,6 +23,8 @@ const LogIn = () => {
     };
     loginUser(newUser, dispatch, navigate);
   };
+
+  const childChange = (type, data) => {};
 
   return (
     <div className="login__background-container">
@@ -35,29 +36,28 @@ const LogIn = () => {
         />
         <form onSubmit={handleLogin}>
           <div className="login__background__input">
-            <input
-              placeholder="name"
-              type="text"
-              onChange={(e) => setUsername(e.target.value)}
-            />
-            <input
-              type="password"
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <TextInput
-              name="UserName"
-              link="/images/username-removebg-preview.png"
-              input="text"
-              onChange={(e) => setUsername(e.target.value)}
-            />
-          </div>
-          <div class="login__background__input">
-            <TextInput
-              name="Password"
-              link="/images/password-removebg-preview.png"
-              input="password"
-              onChange={(e) => setPassword(e.target.value)}
-            />
+            <div className="TextInput__container">
+              <div className="TextInput__container__img">
+                <img src={process.env.PUBLIC_URL + "images/username-removebg-preview.png"} />
+              </div>
+              <input
+                placeholder="UserName"
+                onChange={(e) => setUsername(e.target.value)}
+                className="TextInput__container__input"
+                type="text"
+              />
+            </div>
+            <div className="TextInput__container">
+              <div className="TextInput__container__img">
+                <img src={process.env.PUBLIC_URL + "images/password-removebg-preview.png"} />
+              </div>
+              <input
+                placeholder="Password"
+                onChange={(e) => setPassword(e.target.value)}
+                className="TextInput__container__input"
+                type="password"
+              />
+            </div>
           </div>
           <div className="login__link--password">
             <Link to={"/forgetPassword"}>
@@ -67,11 +67,13 @@ const LogIn = () => {
           {/* <Button type="submit" name={username} onSubmit>
             LOGIN
           </Button> */}
-          <button type="submit">LOGIN</button>
+          <button type="submit" className="mainbutton">
+            LOGIN
+          </button>
         </form>
         <Link to={"/register"}>
           <Links content="Register ?" />
-        </Link> 
+        </Link>
       </BackGround>
     </div>
   );

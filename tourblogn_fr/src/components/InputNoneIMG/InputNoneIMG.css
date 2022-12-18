@@ -1,14 +1,14 @@
-.container {
+.container__noneimg {
     width: 604px;
     height: 50px;
     border: 1px solid black;
     box-sizing: border-box;
     border-radius: 20px;
-    /* position: absolute; */
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 15px 0;
 }
 
 .container__img {

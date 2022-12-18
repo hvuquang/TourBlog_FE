@@ -6,8 +6,7 @@ import Axios from 'axios';
 import { Link } from 'react-router-dom';
 import Loading from '../Loading/Loading';
 import { useSelector } from 'react-redux';
-
-
+import Header from '../Screen/Header/Header'
 
 function Post() {
     const [postList,setPostList] = useState([])

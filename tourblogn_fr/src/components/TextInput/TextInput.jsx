@@ -4,6 +4,9 @@ import "./TextInput.css";
 class TextInput extends Component {
 
   render() {
+    const childChange = () => {
+    
+    }
     return (
       <div className="TextInput__container">
         <div className="TextInput__container__img">
@@ -11,7 +14,7 @@ class TextInput extends Component {
         </div>
         <input
           multiple={this.props.multiple}
-          // onChange={this.props.onchange}
+          onChange={() => childChange()}
           className="TextInput__container__input"
           type={this.props.input}
           placeholder={this.props.name}
