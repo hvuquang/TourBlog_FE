@@ -72,8 +72,19 @@
     justify-content: space-evenly;
 }
 
-.post .img_like,.read_more{
+.post .img_like{
     cursor: pointer;
+}
+.post_content a{
+    text-decoration: none;
+}
+.read_more{
+    color:rgb(194, 194, 194);
+    font-weight: 500;
+}
+.read_more:hover{
+    cursor: pointer;
+    color:#000
 }
 .btnAddport{
     position: fixed;

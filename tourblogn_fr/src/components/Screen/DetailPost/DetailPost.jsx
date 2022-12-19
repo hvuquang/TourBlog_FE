@@ -22,12 +22,6 @@ export default function DetailPost(props) {
             </div>
             <div className='DetailPost__Image'>
                 <img className='DetailPost__Image--imgMain' src={imgURLs} alt='Header_icProfile'/>
-                <div className='DetailPost__Image--imgMini'>
-                    <img className='DetailPost__Image--img'  src={process.env.PUBLIC_URL + '/images/R.jpg'} alt='Header_icProfile'/>
-                    <img className='DetailPost__Image--img' style={{opacity:'0.25'}} src={process.env.PUBLIC_URL + '/images/R.jpg'} alt='Header_icProfile'/>
-                    <img className='DetailPost__Image--img' style={{opacity:'0.25'}} src={process.env.PUBLIC_URL + '/images/R.jpg'} alt='Header_icProfile'/>
-                    <img className='DetailPost__Image--img' style={{opacity:'0.25'}} src={process.env.PUBLIC_URL + '/images/R.jpg'} alt='Header_icProfile'/>     
-                </div>
             </div>
             <div className='DetailPost__content'>
                 <h3 className='DetailPost__content--title'>{title}</h3>
