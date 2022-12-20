@@ -23,6 +23,7 @@
     border-radius: 5px;
     color: #ffffff;
     font-size: larger;
+    resize: none;
 }
 
 .add_post .input_des {
@@ -35,6 +36,7 @@
     border-radius: 5px;
     color: #ffffff;
     font-size: larger;
+    resize: none;
 }
 
 .add_post .add_post_img{
