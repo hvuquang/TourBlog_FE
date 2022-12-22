@@ -23,16 +23,19 @@
     margin-right: 20px;
     margin-top: 10px;
     margin-bottom: 20px;
+    /* min-height: 76px; */
 }
 
 .post .post_content{
     margin-left: 20px;
     margin-right: 10px;
+    min-height: 120px;
+    max-height: 120px;
 }
 
 .post .post_react_flex{
     display: flex;
-    margin-top: 80px;
+    /* margin-top: 10px; */
     margin-left: 20px;
     width: 270px;
     justify-content: space-between;

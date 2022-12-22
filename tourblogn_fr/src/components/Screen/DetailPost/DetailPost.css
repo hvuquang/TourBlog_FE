@@ -54,8 +54,23 @@
     outline: none;
     resize: none;
     margin-top:10px ;
-
 }
+
+.DetailPost__content--description1{
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: #939b4c;
+    height: 20vh;
+    padding-bottom: 20px;
+    width: 85vw;
+    color: black;
+    font-size: large;
+    outline: none;
+    resize: none;
+    margin-top:10px ;
+    border: none;
+}
+
 .DetailPost__content--title{
     border-width: 1px;
     border-radius: 5px;

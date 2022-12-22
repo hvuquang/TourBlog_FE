@@ -15,7 +15,7 @@ export default function DetailPost(props) {
     let [userList, setUserList] = useState([])
     const getUser = async () => {
         try {
-            const res = await axios.get('http://localhost:8000/v1/user/getuser')
+            const res = await axios.get('https://tourblog-be1.herokuapp.com/v1/user/getuser')
             setUserList(res.data)
             userList = res.data;
         }
@@ -42,7 +42,7 @@ export default function DetailPost(props) {
         const answer = window.confirm("Bạn có chắc chắn sửa",);
         if (answer) {
             try {
-                await axios.post('http://localhost:8000/v1/post/updatePost/'
+                await axios.post('https://tourblog-be1.herokuapp.com/v1/post/updatePost/'
                     + idPost, {
                     des: document.getElementById('descript').value,
                     title: document.getElementById('title').value
@@ -60,8 +60,8 @@ export default function DetailPost(props) {
         if (answer) {
             try {
                 console.log("des",idPost)
-                await axios.delete('http://localhost:8000/v1/post/deletePost/'+ idPost)
-                axios.put("http://localhost:8000/v1/user/giampost",{
+                await axios.delete('https://tourblog-be1.herokuapp.com/v1/post/deletePost/'+ idPost)
+                axios.put("https://tourblog-be1.herokuapp.com/v1/user/giampost",{
                     _id : owner
                 } )
                 alert("Xóa thành công")
@@ -80,7 +80,7 @@ export default function DetailPost(props) {
                 </div>
                 <div className='DetailPost__content'>
                     <input className='DetailPost__content--title' id='title' defaultValue={title}></input>
-                    <textarea className='DetailPost__content--description' id='descript'>{des}</textarea>
+                    <textarea className='DetailPost__content--description' id='descript'>{des === "undefined" ? "" : des}</textarea>
                 </div>
                 <button className='btnsua' onClick={()=> submitHandler()}>Sửa</button>
                 <button className='btnxoa' onClick={()=> submitHandler1()}>Xóa</button>
@@ -95,7 +95,7 @@ export default function DetailPost(props) {
                 </div>
                 <div className='DetailPost__content'>
                     <h3 className='DetailPost__content--title'>{title}</h3>
-                    <textarea disabled className='DetailPost__content--description'>{des}</textarea>
+                    <textarea disabled className='DetailPost__content--description1'>{des}</textarea>
                 </div>
             </div>
         )
