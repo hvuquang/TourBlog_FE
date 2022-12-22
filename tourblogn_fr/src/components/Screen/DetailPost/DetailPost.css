@@ -53,9 +53,40 @@
     font-size: large;
     outline: none;
     resize: none;
+    margin-top:10px ;
+
 }
 .DetailPost__content--title{
     border-width: 1px;
     border-radius: 5px;
     border-color: #939b4c;
+    width: 85vw;
+}
+.btnsua{
+    background-color: #669f5f;
+    border-radius: 10px;
+    height: 5vh;
+    width: 5vw;
+    margin-bottom: 2vh;
+}
+.btnxoa{
+    background-color: #c70202;
+    border-radius: 10px;
+    height: 5vh;
+    width: 5vw;
+    margin-bottom: 2vh;
+}
+button:hover{
+    background-color: rgb(255, 247, 0);
+}
+button{
+    margin-left: 30px;
+    font-size: 20px;
+    border-color: rgb(255, 255, 255);
+}
+#title{
+    border-radius: 5px;
+    height: 4vh;
+    font-size: 20px;
+    font-weight: bold;
 }
