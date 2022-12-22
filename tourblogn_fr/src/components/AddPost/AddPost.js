@@ -32,7 +32,7 @@ function AddPost() {
         setShowImg(imgUrl);
     }
     const submitHandler = ()=>{
-        Axios.post("http://localhost:8000/v1/post/addPost", 
+        Axios.post("https://tourblog-be1.herokuapp.com/v1/post/addPost", 
             formData
         )
         Axios.put("http://localhost:8000/v1/user/tangpost",{
