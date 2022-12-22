@@ -15,7 +15,7 @@ function AddPost() {
     const [showImg , setShowImg] = useState([])
     const [show , setShow] = useState(false)
     const formData = new FormData();
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     formData.append('title', title);
     formData.append('des', des);
     formData.append('imgURLs', img)
@@ -34,6 +34,10 @@ function AddPost() {
     const submitHandler = ()=>{
         Axios.post("http://localhost:8000/v1/post/addPost", 
             formData
+        )
+        Axios.put("http://localhost:8000/v1/user/tangpost",{
+            _id : owner
+        }  
         )
         navigate('/')
         // window.location.reload()

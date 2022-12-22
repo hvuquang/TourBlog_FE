@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import './DetailPost.css'
 import Header from '../Header/Header'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import store from '../../../redux/store';
 import axios from 'axios';
 
 export default function DetailPost(props) {
+    const navigate = useNavigate();
     const {idPost} = useLocation().state;
     const {title} = useLocation().state;
     const {des} = useLocation().state;
@@ -17,8 +18,6 @@ export default function DetailPost(props) {
             const res = await axios.get('http://localhost:8000/v1/user/getuser')
             setUserList(res.data)
             userList = res.data;
-            console.log(userList)
-
         }
         catch (error) {
             console.log(error.message)
@@ -49,6 +48,7 @@ export default function DetailPost(props) {
                     title: document.getElementById('title').value
                 })
                 alert("Sửa thành công")
+                navigate('/')
             }
             catch (error) {
                 console.log(error.message)
@@ -59,19 +59,22 @@ export default function DetailPost(props) {
         const answer = window.confirm("Bạn có chắc chắn xóa",);
         if (answer) {
             try {
-                console.log("des",document.getElementById('title').value)
+                console.log("des",idPost)
                 await axios.delete('http://localhost:8000/v1/post/deletePost/'+ idPost)
+                axios.put("http://localhost:8000/v1/user/giampost",{
+                    _id : owner
+                } )
                 alert("Xóa thành công")
+                navigate('/')
             }
             catch (error) {
-                console.log(error.message)
+                console.log("lỗi",error.message)
             }
         }
     }
     const renderAdmin =()=>{
         return(
             <div>
-                {console.log("a",store.getState().auth.login?.currentUser.admin)}
                 <div className='DetailPost__Image'>
                     <img className='DetailPost__Image--imgMain' src={imgURLs} alt={title}/>
                 </div>

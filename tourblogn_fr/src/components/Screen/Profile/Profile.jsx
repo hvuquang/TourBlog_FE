@@ -3,8 +3,10 @@ import "./Profile.css";
 import Header from "../Header/Header";
 import { Link } from "react-router-dom";
 import store from "../../../redux/store";
+import { useSelector } from "react-redux";
 
 export default function Profile() {
+  const user= useSelector((state)=> state.auth.login?.currentUser);
   return (
     <div className="Profile">
       <Header />
@@ -25,7 +27,7 @@ export default function Profile() {
             <div className="Profile_information--static">
               <div className="static posts">
                 <p>Posts</p>
-                <p>100</p>
+                <p>{user.sl_post}</p>
               </div>
               <div className="static line"></div>
               <div className="static visitors">
@@ -66,11 +68,6 @@ export default function Profile() {
         <div className="Profile_Logout">
           <Link to={"/login"}>
             <button className="Button_Logout">Đăng xuất</button>
-          </Link>
-        </div>
-        <div className="Profile_Logout">
-          <Link to={"/login"}>
-            <button className="Button_Logout">Log In ?</button>
           </Link>
         </div>
       </div>
