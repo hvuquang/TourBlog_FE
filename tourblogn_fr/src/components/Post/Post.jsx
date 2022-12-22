@@ -7,12 +7,28 @@ import { Link } from 'react-router-dom';
 import Loading from '../Loading/Loading';
 import { useSelector } from 'react-redux';
 import Header from '../Screen/Header/Header'
+import axios from 'axios';
 
 function Post() {
     const [postList,setPostList] = useState([])
     const user= useSelector((state)=> state.auth.login?.currentUser);
     const a=false;
-    let port = process.env.PORT || 8000
+    const submitHandler1 = async (e,owner) => {
+        const answer = window.confirm("Bạn có chắc chắn xóa",);
+        if (answer) {
+            try {
+                await axios.delete('http://localhost:8000/v1/post/deletePost/'+ e)
+                Axios.put("http://localhost:8000/v1/user/giampost",{
+                    _id : owner
+                }  
+                )
+                alert("Xóa thành công")
+            }
+            catch (error) {
+                console.log(error.message)
+            }
+        }
+    }
     const [loading , setLoading] = useState(false)
     useEffect(()=>{
         Axios.get(`https://tourblog-be1.herokuapp.com/v1/post/readPost`).then((respone) => {setPostList(respone.data) ; setLoading(true)})
@@ -49,7 +65,7 @@ function Post() {
                     <div className='post_title'>{post.title}</div>
                     {/* cần chỉnh lại do nếu để nội dung dài sẽ bị tràn ra ngoài post */}
                     {/* đã chỉnh xong */}
-                    <div className='post_content'>{text.slice(0,50)} <Link to="/detailpost" state={{title:post.title,des:post.des,imgURLs:img_url}}><strong className='read_more'>...read more</strong> </Link></div>
+                    <div className='post_content'>{text.slice(0,50)} <Link to="/detailpost" state={{idPost:post._id, title:post.title,des:post.des,imgURLs:img_url,owner:post.owner}}><strong className='read_more'>...read more</strong> </Link></div>
                     <div className='post_react_flex'>
                         <div className='post_icon_like'>
                             <img className='img_like' onClick={() => likeHandle(post._id)} src={like} alt='' />
@@ -58,22 +74,22 @@ function Post() {
                                 <div className='text_like'>{post.like}</div>
                             </div>
                         </div>
-                        {user?.admin ? <div className='post_icon_like'>
+                        {user?.admin ? 
+                        <div className='post_icon_like' onClick={()=> submitHandler1(post._id,post.owner)}>
                             <img src={Delete} alt='' />
                             <div className='text_like1'>Delete</div>
-                          
-                          </div>:""}
-                            
-                        
+                        </div>
+                        :""}
                     </div>
                 </div>
             }):<Loading/>}
-
+            { user?
             <Link to={"/addpost"}>
                 <div className='btnAddport'>
                     <img className='iconAddPost' src={process.env.PUBLIC_URL + '/images/iconAddPost.png'} alt={"AddPost"} />
                 </div>
             </Link>
+            :""}
         </div>
     </div>
     

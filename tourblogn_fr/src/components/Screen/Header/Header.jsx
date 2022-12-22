@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import store from "../../../redux/store";
-import { connect } from "react-redux";
+import { connect, useSelector } from "react-redux";
 
 function Header() {
-
+  const user= useSelector((state)=> state.auth.login?.currentUser);
   return (
     <div className="Header">
       <Link to={"/"}>
@@ -19,6 +19,7 @@ function Header() {
         <h3 className="Header_NameProfile">
           {store.getState().auth.login.currentUser == null ? <p>NULL</p> : <p>{store.getState().auth.login.currentUser.userName}</p>}
         </h3>
+        { user?
         <Link to={"/profile"}>
           <img
             className="Header_icProfile"
@@ -28,6 +29,15 @@ function Header() {
             alt="Header_icProfile"
           />
         </Link>
+        : <Link to={"/login"}>
+        <img
+            className="Header_icProfile"
+            src={
+              process.env.PUBLIC_URL + "/images/username-removebg-preview.png"
+            }
+            alt="Header_icProfile"
+          />
+        </Link>}
       </div>
     </div>
   );
