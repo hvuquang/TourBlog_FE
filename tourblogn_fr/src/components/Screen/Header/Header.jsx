@@ -17,7 +17,7 @@ function Header() {
       </Link>
       <div className="Header_Profile">
         <h3 className="Header_NameProfile">
-          {store.getState().auth.login.currentUser == null ? <p>NULL</p> : <p>{store.getState().auth.login.currentUser.userName}</p>}
+          {store.getState().auth.login.currentUser == null ? <p>GUEST</p> : <p>{store.getState().auth.login.currentUser.userName}</p>}
         </h3>
         { user?
         <Link to={"/profile"}>
