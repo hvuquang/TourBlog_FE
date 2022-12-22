@@ -68,7 +68,7 @@ function Post() {
                     <div className='post_content'>{text.slice(0,50)} <Link to="/detailpost" state={{idPost:post._id, title:post.title,des:post.des,imgURLs:img_url,owner:post.owner}}><strong className='read_more'>...read more</strong> </Link></div>
                     <div className='post_react_flex'>
                         <div className='post_icon_like'>
-                            { user?<img className='img_like' onClick={() => likeHandle(post._id)} src={like} alt='' />:""}
+                            <img className='img_like' onClick={() => likeHandle(post._id)} src={like} alt='' />
                             <div className='text_like_flex'>
                                 <div className='text_like'>Like</div>
                                 <div className='text_like'>{post.like}</div>
