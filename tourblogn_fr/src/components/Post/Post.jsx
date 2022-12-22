@@ -12,15 +12,15 @@ function Post() {
     const [postList,setPostList] = useState([])
     const user= useSelector((state)=> state.auth.login?.currentUser);
     const a=false;
-  
+    let port = process.env.PORT || 8000
     const [loading , setLoading] = useState(false)
     useEffect(()=>{
-        Axios.get('http://localhost:8000/v1/post/readPost').then((respone) => {setPostList(respone.data) ; setLoading(true)})
+        Axios.get(`https://tourblog-be1.herokuapp.com/v1/post/readPost`).then((respone) => {setPostList(respone.data) ; setLoading(true)})
     },[])
     
     const likeHandle = (id)=>{
         window.location.reload()
-        Axios.put('http://localhost:8000/v1/post/likePost',{
+        Axios.put('https://tourblog-be1.herokuapp.com/v1/post/likePost',{
             _id : id
         })
     }
@@ -43,7 +43,7 @@ function Post() {
               ).map((post, key) => {
                 const text = post.des
                 const imgList = post.imgURLs.split(",")[0];
-                const img_url = "http://localhost:8000/" + imgList;
+                const img_url = "https://tourblog-be1.herokuapp.com/" + imgList;
                 return <div className='post' key={key}>
                     <img className='post_img' src={img_url} alt='' />
                     <div className='post_title'>{post.title}</div>

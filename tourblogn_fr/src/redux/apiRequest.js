@@ -4,7 +4,7 @@ import { loginStart, loginSuccess,loginFailed, registerStart, registerSuccess, r
 export const loginUser = async(user,dispatch,navigate)=>{
     dispatch(loginStart());
     try{
-        const res = await axios.post("http://localhost:8000/v1/auth/login",user);
+        const res = await axios.post("https://tourblog-be1.herokuapp.com/v1/auth/login",user);
         dispatch(loginSuccess(res.data));
         navigate("/");
     }
@@ -16,7 +16,7 @@ export const loginUser = async(user,dispatch,navigate)=>{
 export const registerUser =async(user,dispatch,navigate)=>{
     dispatch(registerStart());
     try{
-        await axios.post("http://localhost:8000/v1/auth/register",user);
+        await axios.post("https://tourblog-be1.herokuapp.com/v1/auth/register",user);
         dispatch(registerSuccess);
         navigate("/login")
 
