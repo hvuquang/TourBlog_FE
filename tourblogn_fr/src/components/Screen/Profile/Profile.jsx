@@ -32,7 +32,7 @@ export default function Profile() {
               <div className="static line"></div>
               <div className="static visitors">
                 <p>Visitors</p>
-                <p>300000</p>
+                <p>12657</p>
               </div>
             </div>
             <div className="Profile_information--email">
