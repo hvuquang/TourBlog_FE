@@ -52,7 +52,7 @@ function AddPost() {
         <Header />
         <div className='title'>Tiêu đề:</div>
         {/* <input type='text' className='input_title' onChange={(event)=>{setTitle(event.target.value)}}/> */}
-        <textarea type='text' className='input_title' cols="10" rows="10" onChange={(event)=>{setTitle(event.target.value)}}></textarea>
+        <textarea type='text' className='input_title' maxLength="25" cols="10" rows="10" onChange={(event)=>{setTitle(event.target.value)}}></textarea>
         <div className='title'>Viết blog:</div>
         {/* <input multiple type='text' className='input_des' onChange={(event) => { setDes(event.target.value) }}/> */}
         <textarea type='text' className='input_des' cols="30" rows="10" onChange={(event) => { setDes(event.target.value)}}></textarea>
