@@ -17,8 +17,8 @@ function Post() {
         const answer = window.confirm("Bạn có chắc chắn xóa",);
         if (answer) {
             try {
-                await axios.delete('https://tourblog-be1.herokuapp.com/v1/post/deletePost/'+ e)
-                Axios.put("https://tourblog-be1.herokuapp.com/v1/user/giampost",{
+                await axios.delete('http://localhost:8000/v1/post/deletePost/'+ e)
+                Axios.put("http://localhost:8000/v1/user/giampost",{
                     _id : owner
                 }  
                 )
@@ -31,12 +31,12 @@ function Post() {
     }
     const [loading , setLoading] = useState(false)
     useEffect(()=>{
-        Axios.get(`https://tourblog-be1.herokuapp.com/v1/post/readPost`).then((respone) => {setPostList(respone.data) ; setLoading(true)})
+        Axios.get(`http://localhost:8000/v1/post/readPost`).then((respone) => {setPostList(respone.data) ; setLoading(true)})
     },[])
     
     const likeHandle = (id)=>{
         window.location.reload()
-        Axios.put('https://tourblog-be1.herokuapp.com/v1/post/likePost',{
+        Axios.put('http://localhost:8000/v1/post/likePost',{
             _id : id
         })
     }
@@ -61,7 +61,7 @@ function Post() {
                 const post_title = post.title
                 
                 const imgList = post.imgURLs.split(",")[0];
-                const img_url = "https://tourblog-be1.herokuapp.com/" + imgList;
+                const img_url = "http://localhost:8000/" + imgList;
                 return <div className='post' key={key}>
                     <img className='post_img' src={img_url} alt='' />
                     <div className='post_title'>{(post.title).length > 15 ? (post.title).slice(0,15) + '...' : post.title}</div>

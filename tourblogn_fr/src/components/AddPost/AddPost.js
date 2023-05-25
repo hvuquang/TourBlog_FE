@@ -32,10 +32,10 @@ function AddPost() {
         setShowImg(imgUrl);
     }
     const submitHandler = ()=>{
-        Axios.post("https://tourblog-be1.herokuapp.com/v1/post/addPost", 
+        Axios.post("http://localhost:8000/v1/post/addPost", 
             formData
         )
-        Axios.put("https://tourblog-be1.herokuapp.com/v1/user/tangpost",{
+        Axios.put("http://localhost:8000/v1/user/tangpost",{
             _id : owner
         }  
         )

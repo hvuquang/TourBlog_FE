@@ -18,7 +18,7 @@ export default function Profile() {
             alt="Profile_header_icon"
           />
           <h2 className="Profile_header_name">
-            {store.getState().auth.login.currentUser == null ? <p>NULL</p> : <p>{store.getState().auth.login.currentUser.userName}</p>}
+            {store.getState().auth.login.currentUser == null ? <p>GUEST</p> : <p>{store.getState().auth.login.currentUser.userName}</p>}
           </h2>
           <p className="Profile_header_details">A web developer, love cats</p>
         </div>
