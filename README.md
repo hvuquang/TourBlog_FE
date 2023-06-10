@@ -14,6 +14,7 @@
 - Figma
 ### HOW TO RUN:
 - Back-end: npm start
+  - Link: https://github.com/hvuquang/TourManagement_Backend
 - Front-end: npm start
 - Tài khoản admin: admin, 123456
 - Tài khoản user đã đăng ký: huy123, huy123
