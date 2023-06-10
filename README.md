@@ -1,29 +1,29 @@
 # TourBlog_FE
-MÔN HỌC: NHẬP MÔN ỨNG DỤNG DI ĐỘNG - SE114.L11.PMCL
-TÊN ĐỀ TÀI: NikeShop
-THÔNG TIN NHÓM:
+## MÔN HỌC: NHẬP MÔN ỨNG DỤNG DI ĐỘNG - SE114.L11.PMCL
+## TÊN ĐỀ TÀI: NikeShop
+### THÔNG TIN NHÓM:
 - Vũ Quang Huy
 - Nguyễn Quốc Huy
 - Dương Duy Trường
 - Huỳnh Minh Chí
-ĐẶT VẤN ĐỀ
-CÔNG CỤ SỬ DỤNG ĐỂ THIẾT KẾ
+### ĐẶT VẤN ĐỀ
+### CÔNG CỤ SỬ DỤNG ĐỂ THIẾT KẾ
 - Ngôn ngữ: ReactJS
 - Cơ sở dữ liệu: MongoDB
 - Version control: Github, Github Desktop
 - Figma
-HOW TO RUN:
+### HOW TO RUN:
 - Back-end: npm start
 - Front-end: npm start
 - Tài khoản admin: admin, 123456
 - Tài khoản user đã đăng ký: huy123, huy123
-CÁC CHỨC NĂNG CHÍNH:
+### CÁC CHỨC NĂNG CHÍNH:
 - Tương tác với bài Post: xem,thêm, xóa, sửa, like, tìm kiếm bài viết
 - Phân quyền người dùng: admin, user đã đăng ký, user chưa đăng ký
-- User chưa đăng ký: chỉ có thể xem, thích bài viết
-- User đã đăng ký: xem, thêm, xóa, sửa, like, tìm kiếm bài viết (chỉ được xóa sửa bài viết cá nhân)
-- Administrator: tất cả các quyền trên, xóa sửa tất cả bài viết
-GIAO DIỆN ỨNG DỤNG
+  - User chưa đăng ký: chỉ có thể xem, thích bài viết
+  - User đã đăng ký: xem, thêm, xóa, sửa, like, tìm kiếm bài viết (chỉ được xóa sửa bài viết cá nhân)
+  - Administrator: tất cả các quyền trên, xóa sửa tất cả bài viết
+### GIAO DIỆN ỨNG DỤNG
 - Giao diện đăng nhập, đăng ký
 ![image](https://github.com/hvuquang/TourBlog_FE/assets/113155975/1519b63b-e1db-4c5c-86f2-66dc680b0ec4)
 ![image](https://github.com/hvuquang/TourBlog_FE/assets/113155975/deebeef8-6f19-4df0-be0c-91218b4e0319)
