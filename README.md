@@ -1,6 +1,5 @@
 # TourBlog_FE
-## MÔN HỌC: NHẬP MÔN ỨNG DỤNG DI ĐỘNG - SE114.L11.PMCL
-## TÊN ĐỀ TÀI: NikeShop
+## TÊN ĐỀ TÀI: TourBlog
 ### THÔNG TIN NHÓM:
 - Vũ Quang Huy
 - Nguyễn Quốc Huy
